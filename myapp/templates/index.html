@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decor Store</title>
+    <link rel="stylesheet" href="w.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #444;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 8px;
+            border: none;
+            background: orange;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Banner Section */
+        .banner {
+            text-align: center;
+            padding: 40px;
+            background: url('NEWS.webp') no-repeat center center/cover;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Product Section */
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product {
+            width: 200px;
+            margin: 15px;
+            padding: 10px;
+            background: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+
+        .product p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Product Cards */
+        .product-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .product-card, .product-card2 {
+            width: 220px;
+            padding: 20px;
+            margin: 15px;
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card button, .product-card2 button {
+            padding: 8px 12px;
+            border: none;
+            background: green;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            background: #ddd;
+            padding: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container"><h1>Hastkala</h1></div>
+        <nav>
+            <form action="web.js" method="get" class="search-bar">
+                <input type="text" name="query" placeholder="Search..." required />
+                <button type="submit">Search</button>
+            </form>
+
+            <ul>
+                <li><a href="#home">🏠</a></li>
+                <li><a href="#products">🛍️</a></li>
+                <li><a href="#contact">📞</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>Welcome to DecoCrafts</h2>
+        <p>Discover unique, handmade decoration items for your home.</p>
+    </section>
+
+    <div class="product-section">
+        <div class="product">
+            <div class="product-image" style="background-image: url('NEWS.webp');"></div>
+            <p>Candle Stands</p>
+        </div>
+        <div class="product">
+            <div class="product-image" style="background-image: url('NEWS.webp');"></div>
+            <p>Candles & Fragrances</p>
+        </div>
+        <div class="product">
+            <div class="product-image" style="background-image: url('NEWS.webp');"></div>
+            <p>Decoratives</p>
+        </div>
+        <div class="product">
+            <div class="product-image" style="background-image: url('NEWS.webp');"></div>
+            <p>Vases</p>
+        </div>
+    </div>
+
+    <section id="products">
+        <h3>Our Products</h3>
+        <div class="product-list">
+            <div class="product-card">
+                <h3>Handmade Vase</h3>
+                <p>$25</p>
+                <button id="add-to-cart"><a href="./">🛒</a></button>
+            </div>
+    
+            <div class="product-card2">
+                <h3>Colourful Mug</h3>
+                <p>₹100</p>
+                <button id="add-to-cart"><a href="./add2.html">🛒</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Name:</strong> Pratham Sahu</p>
+        <p><strong>Phone:</strong> 8770128264</p>
+        <p><strong>Email:</strong> sahuii8050@gmail.com</p>
+        <p><strong>Address:</strong> 117, Shaheed Samarak Path, Kachiyana, Jabalpur (M.P.)</p>
+    </section>
+
+    <footer>
+        <p>© 2024 DecoCrafts. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
